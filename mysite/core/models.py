@@ -14,7 +14,7 @@ class Contato(models.Model):
 
 class Livraria(models.Model):
     titulo = models.CharField(max_length=50)
-    nome_autor = models.CharField(max_kength=50)
+    nome_autor = models.CharField(max_length=50)
     assunto = models.CharField(max_length=50)
     editora = models.CharField(max_length=50)
     ISBN = models.IntegerField(max_length=15)
