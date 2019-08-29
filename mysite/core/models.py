@@ -10,3 +10,15 @@ class Contato(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Livraria(models.Model):
+    titulo = models.CharField(max_length=50)
+    nome_autor = models.CharField(max_kength=50)
+    assunto = models.CharField(max_length=50)
+    editora = models.CharField(max_length=50)
+    ISBN = models.IntegerField(max_length=15)
+    ano_publicacao = models.DateField()
+
+    def __str__(self):
+        return self.titulo
