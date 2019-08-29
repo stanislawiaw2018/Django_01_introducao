@@ -1,3 +1,4 @@
 myenv
 .\..idea\
 *.txt
+.vscode
