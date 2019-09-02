@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from .models import Contato
 
 def home(request):
-    nome =  "Antonio Stanislaw"
-    contatos = Contato.objects.all()
-    return render(request,"layout/base.html",{'contatos': contatos})
+    return render(request,"layout/index.html")
 
+def contato(request):
+    return render(request,"layout/contato.html")
 # Create your views here.
