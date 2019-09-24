@@ -2,4 +2,3 @@ myenv
 .\..idea\
 *.txt
 .vscode
-..\.gitignore
