@@ -6,7 +6,7 @@ class Curso(models.Model):
     slug = models.SlugField("Apreviação")
     description = models.TextField("Descrição")
     start_date = models.DateField("Data de Inicio", null=True, blank=True)
-    image = models.ImageField(upload_to='cursos/images', verbose_name="Imagem")
+    image = models.ImageField(upload_to='cursos/images', verbose_name="Imagem", null=True, blank=True)
     created_at = models.DateTimeField("Criado em", auto_now_add=True)
     updated_at = models.DateTimeField("Atualizado em", auto_now=True)
 
