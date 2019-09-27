@@ -10,4 +10,10 @@ def curso(request):
     }
     return render(request, template_name, context)
 
-
+def detalhe(request, pk):
+    curso = Curso.objects.get(pk=pk)
+    context = {
+        'curso' : curso
+    }
+    template_name = 'layout/detalhe.html'
+    return render(request, template_name, context)
