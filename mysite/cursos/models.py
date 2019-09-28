@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 class Curso(models.Model):
     name = models.CharField("Nome", max_length=100)
@@ -13,7 +13,11 @@ class Curso(models.Model):
 
     def __str__(self):
         return self.name
+ 
+    def get_absolute_url(self):
+        return reverse('detalhe', kwargs={'slug' : self.slug})
 
+        
     class Meta():
         verbose_name = "Curso"
         verbose_name_plural = "Cursos"

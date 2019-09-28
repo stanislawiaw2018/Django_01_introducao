@@ -4,7 +4,8 @@ from .views import *
 
 urlpatterns = [
     path('', curso, name = 'curso'),
-    re_path(r'^(?P<pk>\d+)/$', detalhe, name = 'detalhe'),
+    # re_path(r'^(?P<pk>\d+)/$', detalhe, name = 'detalhe'),
+    re_path(r'^(?P<slug>[\w-]+)/$', detalhe, name = 'detalhe'),
    
    
 ]
