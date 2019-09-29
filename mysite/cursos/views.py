@@ -26,7 +26,11 @@ def detalhe(request, slug):
         form = ContatoCurso(request.POST)
         if form.is_valid():
             context['is_valid'] = True
+            form.send_mail(curso)
+            #if form.cleaned_data['question']:
+                
             form = ContatoCurso()
+            
     else:
         form = ContatoCurso()
     context['form'] = form
